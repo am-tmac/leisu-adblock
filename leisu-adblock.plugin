@@ -1,0 +1,46 @@
+#!name = 雷速体育去广告
+#!desc = 拦截雷速体育 iOS (com.leisu.sports) 内嵌聚合广告SDK的网络请求：开屏/插屏/Banner/信息流/激励视频。域名提取自 11.2.2 二进制。无需MITM。
+#!author = Hermes
+#!date = 2026-11-15
+
+[Rule]
+# Sigmob
+DOMAIN-SUFFIX, sigmob.cn, REJECT
+# 倍孜 Beizi / adn-plus
+DOMAIN-SUFFIX, beizi.biz, REJECT
+DOMAIN-SUFFIX, adn-plus.com.cn, REJECT
+DOMAIN-SUFFIX, hubcloud.com.cn, REJECT
+# AdGain
+DOMAIN-SUFFIX, adgain.cn, REJECT
+# AdScope
+DOMAIN-SUFFIX, ad-scope.com.cn, REJECT
+# OctAd / 整数 adintl
+DOMAIN-SUFFIX, adintl.cn, REJECT
+# JT 章鱼移动（JTSplashAD 开屏）
+DOMAIN-SUFFIX, zhangyuyidong.cn, REJECT
+# Ubix
+DOMAIN-SUFFIX, ubixioe.com, REJECT
+# TopOn / AnyThink (tobidad)
+DOMAIN-SUFFIX, tobidad.cn, REJECT
+DOMAIN-SUFFIX, tobidad.com, REJECT
+DOMAIN-SUFFIX, etoolads.cn, REJECT
+# TapTap 广告回调
+DOMAIN, taptap.net.cn, REJECT
+# feedsads 素材
+DOMAIN-SUFFIX, feedsads.cn, REJECT
+# 顺昌智兴
+DOMAIN-SUFFIX, shunchangzhixing.com, REJECT
+# Tanx
+DOMAIN-SUFFIX, tanx.com, REJECT
+# 穿山甲 CSJ / GroMore 相关
+DOMAIN-SUFFIX, pangle.cn, REJECT
+DOMAIN-SUFFIX, pangle.io, REJECT
+DOMAIN, is.snssdk.com, REJECT
+DOMAIN, mon.snssdk.com, REJECT
+# 优量汇 GDT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN-SUFFIX, gdtimg.com, REJECT
+# 友盟归因/广告（不动 cnlogs/ulogs 统计域名，避免影响 App）
+DOMAIN, one.umops.com, REJECT
+DOMAIN, ucc.umeng.com, REJECT
+DOMAIN, deeplink.umeng.com, REJECT
